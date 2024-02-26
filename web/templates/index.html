@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telegram Alert</title>
+</head>
+<body>
+    <h1>Latest Trade Alert:</h1>
+    <p>{{ summarized_message }}</p>
+    <p>Sentiment: {{ sentiment }}</p>
+    <form action="/trigger" method="post">
+        <button type="submit">Trigger Alert</button>
+    </form>
+</body>
+</html>

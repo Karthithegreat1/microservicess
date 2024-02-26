@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  web_page_service:
+    build:
+      context: ./web
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+
+  telegram_service:
+    build:
+      context: ./telegram
+      dockerfile: Dockerfile
+    ports:
+      - "8001:8001"
