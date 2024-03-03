@@ -1,0 +1,4 @@
+Flask
+requests
+vaderSentiment==3.3.2
+reportlab==3.6.1
