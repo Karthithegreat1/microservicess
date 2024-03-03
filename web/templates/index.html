@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telegram Alert</title>
+</head>
+<body>
+    <h1>Latest Trade Alerts:</h1>
+    {% for info, sentiment in messages_with_sentiments %}
+        <div>
+            <p>Position: {{ info[0] }}</p>
+            <p>Symbol: {{ info[1] }}</p>
+            <p>Entry Price: {{ info[2] }}</p>
+            <p>Sentiment: {{ sentiment }}</p>
+        </div>
+    {% endfor %}
+    <form action="/download_pdf" method="get">
+        <button type="submit">Download PDF</button>
+    </form>
+    <script>
+        // Automatically reload the page every 1 second
+        setInterval(function(){
+            window.location.reload(true);
+        }, 1000);
+    </script>
+</body>
+</html>
