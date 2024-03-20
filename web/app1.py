@@ -5,7 +5,7 @@ from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 app = Flask(__name__)
 
 # URL of the Telegram Service
-TELEGRAM_SERVICE_URL = 'http://18.215.248.144:8001/webhook'
+TELEGRAM_SERVICE_URL = 'http://54.237.101.72:8001/webhook'
 
 # Initialize the sentiment analyzer
 analyzer = SentimentIntensityAnalyzer()
